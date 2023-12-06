@@ -1,0 +1,1 @@
+alert("This is an warning message displayed by JavaScript");

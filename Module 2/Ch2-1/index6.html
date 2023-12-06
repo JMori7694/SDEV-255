@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            class Person {
+                firstname = "";
+                lastname = "";
+                age = 0;
+
+                constructor(lastname, firstname, age) {
+                    this.lastname = lastname;
+                    this.firstname = firstname;
+                    this.age = age;
+                }
+
+                display() {
+                    console.log("The person's last name = " + this.lastname + ", firstname = " + this.firstname);
+                }
+            }
+            var p = new Person;
+            p.lastname = "Clinton";
+            p.firstname = "Bill";
+            console.log(p);
+            p.display();
+        </script>
+    </head>
+
+    <body>
+    
+    </body>
+
+</html>
