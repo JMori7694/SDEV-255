@@ -3,7 +3,6 @@ const Element = {
         return {
             inputTitle: false,
             inputTask: false,
-            inputDateA: false,
         };
     },
 
@@ -19,9 +18,8 @@ const Element = {
             <input v-else type="text" :value="element.task" @blur="task($event)" ref="refInputTask"/>
             <button @click="inputTask=true">Modify Task </button>
   
-            <span v-if="!inputDateA"> {{element.dateA}} </span>
-            <input v-else type="text" :value="element.dateA" @blur="dateA($event)" ref="refInputDateA"/>
-            <button @click="inputDateA=true">Assigned Date </button>
+            <label> Assigned Date </label>
+            <input type="date" :value="element.dateA" @blur="dateA($event)" />
         </li>
     `,
 
@@ -46,7 +44,6 @@ const Element = {
 
         dateA(event) {
             var value = event.target.value;
-            this.inputDateA = false; 
             this.$emit("dateA", { id: this.element._id, value: value });
         },
     },
